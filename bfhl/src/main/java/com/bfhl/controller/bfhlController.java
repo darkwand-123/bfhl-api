@@ -7,8 +7,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 @RestController
 public class bfhlController {
+
+    @GetMapping("/")
+    public String welcome() {
+        return "Welcome to BFHL API";
+    }
 
     @PostMapping("/bfhl")
     public OutputData processData(@RequestBody InputData inputData) {
